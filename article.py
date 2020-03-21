@@ -2,10 +2,10 @@ from newspaper import Article
 from bs4 import BeautifulSoup
 import requests
 import nltk
-#nltk.download("punkt")
+import re
 
 def search(soup):
-    results = soup.find_all(text="Union",recursive=True)
+    results = soup.find_all(string=re.compile("Union"),recursive=True)
     print(len(results))
 
 web_url = "https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pKVGlnQVAB?hl=en-IN&gl=IN&ceid=IN%3Aen"
