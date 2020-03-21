@@ -5,7 +5,7 @@ import nltk
 import re
 
 def search(soup):
-    results = soup.find_all(string=re.compile("Union"),recursive=True)
+    results = soup.find_all(string=re.compile("Union | cabinet"),recursive=True)
     print(len(results))
 
 web_url = "https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pKVGlnQVAB?hl=en-IN&gl=IN&ceid=IN%3Aen"
